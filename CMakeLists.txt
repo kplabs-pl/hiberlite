@@ -72,19 +72,22 @@ target_link_libraries(${TARGET_NAME}
   dl
   )
 
-add_executable(sample
-  sample.cpp
-  )
+if(HIBERLITE_ENABLE_SAMPLE)
+    add_executable(sample
+        sample.cpp
+    )
 
-target_link_libraries(sample
-  ${TARGET_NAME}
-  )
+    target_link_libraries(sample
+        ${TARGET_NAME}
+    )
+endif()
 
-add_executable(tests
-  tests.cpp
-  )
+if(HIBERLITE_ENABLE_TESTS)
+    add_executable(tests
+        tests.cpp
+    )
 
-target_link_libraries(tests
-  ${TARGET_NAME}
-)
-  
+    target_link_libraries(tests
+        ${TARGET_NAME}
+    )
+endif()
