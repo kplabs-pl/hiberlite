@@ -7,8 +7,6 @@ project(hiberlite)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 11)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-terminate")
-
 set(TARGET_NAME hiberlite) 
 
 set(SOURCES_SQLITE
